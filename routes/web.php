@@ -24,3 +24,7 @@ Route::get('/greet', function () {
     // $myname = $_GET['myname']; //plain PHP would work but without error checking
     return "<h1>Hello $myname!</h1>";
 });
+
+Route::get('/tracks', function () {
+    return view('tracks');
+});
