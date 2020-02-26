@@ -33,3 +33,18 @@ Route::get('/tracks', function () {
         "favorite" => "Jumprava",
     ]);
 });
+
+//route for urls with type /wild/something
+// plain /wild will not work here
+Route::get('/wild/{par1}/{par2}', function ($post, $p2) {
+    // return "<h1>Post $post</h1><p>Aha $p2</p>";
+    return view('wild', [
+        "mytitle" => $post,
+        "mypar" => $p2,
+    ]);
+});
+
+//for this route we will call
+//show method
+//which lives in PostsController (under app/Http/Controllers)
+Route::get('/posts/{post}', 'PostsController@show');
