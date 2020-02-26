@@ -7,5 +7,9 @@
 </head>
 <body>
     <h1>My Music</h1>
+    <p>Greetings {{ $myusername }}    </p>
+    <hr>
+    <p>Your favorite band is {{ $favorite }}
+    </p>
 </body>
 </html>

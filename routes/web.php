@@ -26,5 +26,10 @@ Route::get('/greet', function () {
 });
 
 Route::get('/tracks', function () {
-    return view('tracks');
+    $myuser = request('myuser');
+
+    return view('tracks', [
+        "myusername" => $myuser,
+        "favorite" => "Jumprava",
+    ]);
 });
