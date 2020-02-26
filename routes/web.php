@@ -48,3 +48,4 @@ Route::get('/wild/{par1}/{par2}', function ($post, $p2) {
 //show method
 //which lives in PostsController (under app/Http/Controllers)
 Route::get('/posts/{post}', 'PostsController@show');
+Route::get('/music/{track}', 'MusicController@show');
