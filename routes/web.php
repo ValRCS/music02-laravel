@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return "<h1>This is all about me!</h1>";
 });
+
+Route::get('/greet', function () {
+    $myname = request('myname');
+    // $myname = $_GET['myname']; //plain PHP would work but without error checking
+    return "<h1>Hello $myname!</h1>";
+});
