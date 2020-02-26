@@ -10,9 +10,21 @@
     <p>My song  {{ $track->name }}</p>
     <p>My artist {{ $track->artist }}</p>
     <p>My album {{ $track->album }}</p>
-    <!-- <p>My debug {{ dd($track) }}</p> -->
+    @foreach ($track as $key=>$value)
+        <p>This {{$key}} has value: {{$value}}</p>
+    @endforeach
+    <hr>
+@php
+    var_dump($track);
+    echo "<hr>";
+    foreach ($track as $key=>$value) {
+        echo "Key $key Value: $value";
+    }
+@endphp
+    <p>Hmmm
+
+</p>
 <hr>
-@foreach
-@endforeach
+
 </body>
 </html>
